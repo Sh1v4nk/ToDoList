@@ -2,6 +2,12 @@
 
 This is a simple ToDo List application that I'm currently working on.
 
+## Table of Contents
+
+- [Installation](#installation)
+- [Demo](#demo)
+- [Contributing](#contributing)
+
 ## Installation
 
 1. Clone the repository.
