@@ -6,6 +6,7 @@ This is a simple ToDo List application that I'm currently working on.
 
 - [Installation](#installation)
 - [Demo](#demo)
+- [Screenshot](#screenshot)
 - [Contributing](#contributing)
 
 ## Installation
@@ -28,6 +29,10 @@ cd ToDoList
 
 You can view the demo of ToDoList [here](Will be added soon).
 
+## Screenshot
+
+Will be added soon...
+
 ## Contributing
 
 Contributions are welcome! Please submit a pull request with any changes.
@@ -38,7 +43,7 @@ Contributions are welcome! Please submit a pull request with any changes.
 
 > This project is a work in progress and the JavaScript code is not uploaded yet. I'm actively working on completing the functionality. Feel free to check back later for updates. Thank you for your interest!
 
-If you have any suggestions or feedback, feel free to reach out to me.
+Thank you for visiting my Calculator repository. If you have any suggestions or feedback, feel free to reach out to me.
 
 Connect with me:
 
