@@ -43,7 +43,7 @@ Contributions are welcome! Please submit a pull request with any changes.
 
 > This project is a work in progress and the JavaScript code is not uploaded yet. I'm actively working on completing the functionality. Feel free to check back later for updates. Thank you for your interest!
 
-Thank you for visiting my Calculator repository. If you have any suggestions or feedback, feel free to reach out to me.
+Thank you for visiting my ToDOList repository. If you have any suggestions or feedback, feel free to reach out to me.
 
 Connect with me:
 
