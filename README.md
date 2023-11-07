@@ -5,6 +5,7 @@ This is a simple ToDo List application that I'm currently working on.
 ## Table of Contents
 
 - [Installation](#installation)
+- [Technologies Used](#technologies-used)
 - [Demo](#demo)
 - [Screenshot](#screenshot)
 - [Contributing](#contributing)
@@ -24,6 +25,12 @@ cd ToDoList
 ```
 
 3. Start Using the Repository.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
 
 ## Demo
 
