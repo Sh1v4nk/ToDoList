@@ -99,9 +99,22 @@ li.task input[type="checkbox"] {
   cursor: pointer;
 }
 
+.delete-btn {
+  background: #ff2d00;
+  color: white;
+  font-size: .8rem;
+  font-weight: 400;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  padding: .3rem;  
+  border-radius: 3px;
+  margin-left: auto;
+}
+
 @media (max-width: 600px) {
   .container {
-    padding: 2rem;
+    padding: 1.3rem;
   }
 
   .main-wrapper {
@@ -126,5 +139,9 @@ li.task input[type="checkbox"] {
   li.task input[type="checkbox"] {
     height: 1rem;
     width: 1rem;
+  }
+
+  .delete-btn {
+    padding: .25rem;
   }
 }
