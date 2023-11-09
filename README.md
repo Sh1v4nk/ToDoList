@@ -1,6 +1,6 @@
 # ToDoList
 
-This is a simple ToDo List application that I'm currently working on.
+This is a simple ToDoList application that I'm currently working on.
 
 ## Table of Contents
 
@@ -39,7 +39,7 @@ You can view the demo of ToDoList [here](https://sh1v4nk.github.io/ToDoList/).
 ## Screenshot
 
 <div align="center">
-    <img src="https://i.ibb.co/hDmST3t/image.png" alt="ToDOList Screenshot" height="auto" />
+    <img src="https://i.ibb.co/hDmST3t/image.png" alt="ToDOList Screenshot"/>
 </div>
 
 ## Contributing
@@ -48,7 +48,7 @@ Contributions are welcome! Please submit a pull request with any changes.
 
 ---
 
-Thank you for visiting my ToDOList repository. If you have any suggestions or feedback, feel free to reach out to me.
+Thank you for visiting my ToDoList repository. If you have any suggestions or feedback, feel free to reach out to me.
 
 Connect with me:
 
