@@ -99,17 +99,34 @@ li.task input[type="checkbox"] {
   cursor: pointer;
 }
 
+.right-style {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.task-done {
+  margin: 0.5rem;
+  border: 0.1px solid transparent;
+  background: green;
+  color: #f2f2f2;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  user-select: none;
+  border-radius: 3px;
+  display: none;
+}
+
 .delete-btn {
   background: #ff2d00;
   color: white;
-  font-size: .8rem;
   font-weight: 400;
   cursor: pointer;
   display: grid;
   place-content: center;
-  padding: .3rem;  
+  padding: 0.3rem;
   border-radius: 3px;
-  margin-left: auto;
 }
 
 @media (max-width: 600px) {
@@ -142,6 +159,11 @@ li.task input[type="checkbox"] {
   }
 
   .delete-btn {
-    padding: .25rem;
+    padding: 0.25rem;
+  }
+
+  .task-done {
+    font-size: 0.7rem;
+    padding: 0.4rem;
   }
 }
