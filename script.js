@@ -13,10 +13,13 @@ form.addEventListener("submit", function (e) {
     const deleteBtn = newTask.querySelector(".delete-btn");
     deleteBtn.addEventListener("click", function () {
       newTask.parentNode.removeChild(newTask);
+      saveTasks();
     });
 
     taskList.appendChild(newTask);
     taskInput.value = "";
+
+    saveTasks();
   }
 });
 
@@ -35,5 +38,28 @@ document.querySelector(".task-list").addEventListener("change", function (event)
         taskText.style.textDecoration = "none";
         taskDone.style.display = "none";
       }
+      saveTasks();
     }
   });
+
+function addDeleteEventListeners() {
+  const deleteButton = document.querySelectorAll(".delete-btn");
+  deleteButton.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const listItem = button.closest(".task");
+      listItem.parentNode.removeChild(listItem);
+      saveTasks();
+    });
+  });
+}
+
+function saveTasks() {
+  window.localStorage.setItem("taskList", taskList.innerHTML);
+}
+
+function loadTasks() {
+  const savedTasks = window.localStorage.getItem("taskList");
+  taskList.innerHTML = savedTasks;
+  addDeleteEventListeners();
+}
+loadTasks();
