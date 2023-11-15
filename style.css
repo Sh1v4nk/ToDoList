@@ -82,12 +82,17 @@ ul.task-list {
 li.task {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   background: rgba(245, 245, 245, 0.4);
   border-radius: 3px;
   padding: 1rem;
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  height: 3rem;
+  word-break: break-word;
+}
+
+li.task span {
+  flex: 1;
 }
 
 li.task input[type="checkbox"] {
@@ -99,14 +104,17 @@ li.task input[type="checkbox"] {
   cursor: pointer;
 }
 
+li span{
+font-weight: 500;  
+}
+
 .right-style {
   display: flex;
   align-items: center;
-  margin-left: auto;
 }
 
 .task-done {
-  margin: 0.5rem;
+  margin-right: 0.5rem;
   border: 0.1px solid transparent;
   background: green;
   color: #f2f2f2;
@@ -142,9 +150,12 @@ li.task input[type="checkbox"] {
     font-size: 1.5rem;
   }
 
-  .input-field,
-  li.task {
+  .input-field {
     height: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .li.task {
     font-size: 1rem;
   }
 
@@ -154,8 +165,8 @@ li.task input[type="checkbox"] {
   }
 
   li.task input[type="checkbox"] {
-    height: 1rem;
-    width: 1rem;
+    height: 1.2rem;
+    width: 1.2rem;
   }
 
   .delete-btn {
