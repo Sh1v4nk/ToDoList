@@ -8,7 +8,7 @@ form.addEventListener("submit", function (e) {
   if (taskInput.value.trim() !== "") {
     const newTask = document.createElement("li");
     newTask.className = "task";
-    newTask.innerHTML = `<input class="check-btn" type="checkbox"><span>${taskInput.value}</span><span class="right-style"><span class="task-done">&#10004 Completed</span><button class="delete-btn"><span class="material-symbols-outlined">delete</span></button></span>`;
+    newTask.innerHTML = `<input class="check-btn" type="checkbox"><span>${taskInput.value}</span><div class="right-style"><span class="task-done">&#10004 Completed</span><button class="delete-btn"><span class="material-symbols-outlined">delete</span></button></div>`;
 
     const deleteBtn = newTask.querySelector(".delete-btn");
     deleteBtn.addEventListener("click", function () {
@@ -28,7 +28,7 @@ document.querySelector(".task-list").addEventListener("change", function (event)
 
     if (target.classList.contains("check-btn") && target.type === "checkbox") {
       let listItem = target.closest(".task");
-      let taskText = listItem.querySelector("span:not(.right-style)");
+      let taskText = listItem.querySelector("span");
       let taskDone = listItem.querySelector(".task-done");
 
       if (target.checked) {
