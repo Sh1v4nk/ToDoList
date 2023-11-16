@@ -9,7 +9,6 @@ Welcome to my Simple ToDoList application—a project born out of my journey to 
 - [How to Use](#how-to-use)
 - [Installation](#installation)
 - [Technologies Used](#technologies-used)
-- [Demo](#demo)
 - [Screenshot](#screenshot)
 - [Contributing](#contributing)
 
@@ -31,19 +30,16 @@ This ToDoList is a beginner-friendly web application built with HTML, CSS, and J
 
 ## Installation
 
-1. Clone the repository.
+To start using the ToDoList, follow these steps:
+
+1. Clone the repository using the following command:
 
 ```bash
-git clone https://github.com/Sh1v4nk/ToDoList.git
+ git clone https://github.com/Sh1v4nk/ToDoList.git
 ```
+2. Open the `index.html` file in your web browser.
 
-2. Navigate to the Repository Directory.
-
-```bash
-cd ToDoList
-```
-
-3. Start Using the Repository.
+3. Alternatively, you can view a live demo of the ToDoList [here](https://sh1v4nk.github.io/ToDoList/).
 
 ## Technologies Used
 
@@ -51,14 +47,10 @@ cd ToDoList
 - CSS
 - JavaScript
 
-## Demo
-
-You can view the demo of ToDoList [here](https://sh1v4nk.github.io/ToDoList/).
-
 ## Screenshot
 
 <div align="center">
-    <img src="https://i.ibb.co/hDmST3t/image.png" alt="ToDOList Screenshot"/>
+    <img src="https://i.ibb.co/hDmST3t/image.png" alt="ToDOList Screenshot" />
 </div>
 
 ## Contributing
