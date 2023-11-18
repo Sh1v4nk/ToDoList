@@ -104,8 +104,8 @@ li.task input[type="checkbox"] {
   cursor: pointer;
 }
 
-li span{
-font-weight: 500;  
+li span {
+  font-weight: 500;
 }
 
 .right-style {
@@ -124,6 +124,49 @@ font-weight: 500;
   user-select: none;
   border-radius: 3px;
   display: none;
+  position: relative;
+}
+
+.task-done::before {
+  position: absolute;
+  content: "Task Completed";
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0) scale(0);
+  visibility: hidden;
+  opacity: 0;
+  background-color: #000;
+  color: #fff;
+  width: max-content;
+  padding: 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease,
+    transform 0.3s ease;
+  transform-origin: bottom center;
+}
+
+.task-done::after {
+  content: "";
+  position: absolute;
+  top: -17%;
+  left: 50%;
+  border: solid transparent;
+  border-width: 7px;
+  border-top-color: #000;
+  transform: translateX(-50%) translateY(0) scale(0);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transform-origin: bottom center;
+}
+
+.task-done:hover::before,
+.task-done:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0) scale(1);
 }
 
 .delete-btn {
@@ -135,6 +178,50 @@ font-weight: 500;
   place-content: center;
   padding: 0.3rem;
   border-radius: 3px;
+  position: relative;
+}
+
+.delete-btn::before {
+  content: "Delete";
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0) scale(0);
+  background-color: #000;
+  color: #fff;
+  width: max-content;
+  padding: 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease,
+    transform 0.3s ease;
+  transform-origin: bottom center;
+}
+
+.delete-btn::after {
+  content: "";
+  position: absolute;
+  top: -17%;
+  left: 50%;
+  border: solid transparent;
+  border-width: 7px;
+  border-top-color: #000;
+  transform: translateX(-50%) translateY(0) scale(0);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transform-origin: bottom center;
+}
+
+.delete-btn:hover::before,
+.delete-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0) scale(1);
 }
 
 @media (max-width: 600px) {
