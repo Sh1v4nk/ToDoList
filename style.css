@@ -73,6 +73,49 @@ form {
   min-width: 0;
   border-radius: 3px;
   cursor: pointer;
+  position: relative;
+}
+
+.add-btn::before {
+  position: absolute;
+  content: "Add Task";
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0) scale(0);
+  visibility: hidden;
+  opacity: 0;
+  background-color: #000;
+  color: #fff;
+  width: max-content;
+  padding: 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease,
+    transform 0.3s ease;
+  transform-origin: bottom center;
+}
+
+.add-btn::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  border: solid transparent;
+  border-width: 7px;
+  border-top-color: #000;
+  transform: translateX(-50%) translateY(0) scale(0);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transform-origin: bottom center;
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0) scale(1);
 }
 
 ul.task-list {
@@ -102,6 +145,49 @@ li.task input[type="checkbox"] {
   accent-color: #00acf0;
   margin-right: 0.5rem;
   cursor: pointer;
+  position: relative;
+}
+
+li.task input[type="checkbox"]::before {
+  position: absolute;
+  content: "Task: ✓/✗";
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0) scale(0);
+  visibility: hidden;
+  opacity: 0;
+  background-color: #000;
+  color: #fff;
+  width: max-content;
+  padding: 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease,
+    transform 0.3s ease;
+  transform-origin: bottom center;
+}
+
+li.task input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  border: solid transparent;
+  border-width: 7px;
+  border-top-color: #000;
+  transform: translateX(-50%) translateY(0) scale(0);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transform-origin: bottom center;
+}
+
+li.task input[type="checkbox"]:hover::before,
+li.task input[type="checkbox"]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0) scale(1);
 }
 
 li span {
