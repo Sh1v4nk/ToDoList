@@ -55,7 +55,11 @@ To start using the ToDoList, follow these steps:
 
 ## Contributing
 
-Contributions are welcome! If you have any ideas for improvements or new features, feel free to fork the repository and submit a pull request.
+Contributions are welcome! If you have any ideas for improvements or new features, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and submit a pull request.
 
 ---
 
