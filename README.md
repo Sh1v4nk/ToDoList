@@ -12,23 +12,23 @@ Welcome to my Simple ToDoList application—a project born out of my journey to 
 - [Screenshot](#screenshot)
 - [Contributing](#contributing)
 
-## 📝 Overview
+## Overview
 
 This ToDoList is a beginner-friendly web application built with HTML, CSS, and JavaScript. It's designed to be a great starting point for those who are new to web development. The interface is clean, intuitive, and easy to use, making it a perfect project for learning the basics.
 
-## ✅ Features
+## Features
 
 - **Add and Remove Tasks:** Easily add tasks to your list and remove them when they're completed.
 - **Save Tasks Locally:** Your tasks are saved to local storage, so you won't lose them even if you close the browser.
 - **Responsive Design:** The application is responsive and works well on various devices, from desktops to smartphones.
 
-## 👩‍💻 How to Use
+## How to Use
 
 - **Add Tasks:** Simply type your task in the input field and press enter to add it to the list.
 - **Remove Tasks:** Click on a task to mark it as completed. Click delete button to remove it from the list.
 - **Persistence:** Your tasks are automatically saved to local storage, ensuring they persist even if you close the browser.
 
-## 🔧 Installation
+## Installation
 
 To start using the ToDoList, follow these steps:
 
@@ -47,13 +47,13 @@ To start using the ToDoList, follow these steps:
 - CSS
 - JavaScript
 
-## 📸 Screenshot
+## Screenshot
 
 <div align="center">
     <img src="https://i.ibb.co/hDmST3t/image.png" alt="ToDOList Screenshot" />
 </div>
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! If you have any ideas for improvements or new features, please follow these steps:
 
