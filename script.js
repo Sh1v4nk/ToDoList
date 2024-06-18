@@ -1,82 +1,80 @@
-const form = document.querySelector("form");
-const taskInput = document.querySelector(".input-field");
-const taskList = document.querySelector("ul");
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  const taskInput = document.querySelector(".input-field");
+  const taskList = document.querySelector("ul.task-list");
 
-// Event listener for form submission
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+  // Load tasks from local storage on page load
+  loadTasks();
 
-  // Check if the task input field is not empty
-  if (taskInput.value.trim() !== "") {
-    // Create a new task item
+  // Event listener for form submission
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (taskInput.value.trim() !== "") {
+      addTask(taskInput.value);
+      taskInput.value = ""; // Clear task input field
+      saveTasks(); // Save tasks to local storage
+    }
+  });
+
+  // Event listener for task list changes (checkboxes)
+  taskList.addEventListener("change", function (event) {
+    if (event.target.classList.contains("check-btn")) {
+      toggleTaskCompletion(event.target);
+      saveTasks(); // Save tasks to local storage
+    }
+  });
+
+  // Function to add a new task to the task list
+  function addTask(taskText) {
     const newTaskItem = document.createElement("li");
     newTaskItem.className = "task";
     newTaskItem.innerHTML = `
       <input class="check-btn" type="checkbox">
-      <span>${taskInput.value}</span>
+      <span>${taskText}</span>
       <div class="right-style">
         <span class="task-done">&#10004 Completed</span>
         <button class="delete-btn"><span class="material-symbols-outlined">delete</span></button>
       </div>`;
-
-    // Add event listener to delete button of the new task
-    const deleteButton = newTaskItem.querySelector(".delete-btn");
-    deleteButton.addEventListener("click", function () {
-      newTaskItem.parentNode.removeChild(newTaskItem);
-      saveTasks();
+    
+    newTaskItem.querySelector(".delete-btn").addEventListener("click", function () {
+      newTaskItem.remove();
+      saveTasks(); // Save tasks to local storage
     });
 
-    // Append the new task to the task list
     taskList.appendChild(newTaskItem);
-    taskInput.value = ""; // Clear task input field
-
-    saveTasks(); // Save tasks to local storage
   }
-});
 
-// Event listener for checkbox changes
-document.querySelector(".task-list").addEventListener("change", function (event) {
-  const target = event.target;
+  // Function to toggle task completion status
+  function toggleTaskCompletion(checkbox) {
+    const listItem = checkbox.closest(".task");
+    const taskText = listItem.querySelector("span");
+    const taskDone = listItem.querySelector(".task-done");
 
-  // Check if the target is a checkbox
-  if (target.classList.contains("check-btn") && target.type === "checkbox") {
-    let listItem = target.closest(".task");
-    let taskText = listItem.querySelector("span");
-    let taskDone = listItem.querySelector(".task-done");
-
-    // Update task text and completion status
-    if (target.checked) {
+    if (checkbox.checked) {
       taskText.style.textDecoration = "line-through";
       taskDone.style.display = "block";
     } else {
       taskText.style.textDecoration = "none";
       taskDone.style.display = "none";
     }
-    saveTasks(); // Save tasks to local storage
+  }
+
+  // Function to save tasks to local storage
+  function saveTasks() {
+    window.localStorage.setItem("taskList", taskList.innerHTML);
+  }
+
+  // Function to load tasks from local storage
+  function loadTasks() {
+    const savedTasks = window.localStorage.getItem("taskList");
+    if (savedTasks) {
+      taskList.innerHTML = savedTasks;
+      taskList.querySelectorAll(".delete-btn").forEach(function (button) {
+        button.addEventListener("click", function () {
+          button.closest(".task").remove();
+          saveTasks(); // Save tasks to local storage
+        });
+      });
+    }
   }
 });
-
-// Function to add event listeners to delete buttons
-function addDeleteEventListeners() {
-  const deleteButtons = document.querySelectorAll(".delete-btn");
-  deleteButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      const listItem = button.closest(".task");
-      listItem.parentNode.removeChild(listItem);
-      saveTasks(); // Save tasks to local storage
-    });
-  });
-}
-
-// Function to save tasks to local storage
-function saveTasks() {
-  window.localStorage.setItem("taskList", taskList.innerHTML);
-}
-
-// Function to load tasks from local storage
-function loadTasks() {
-  const savedTasks = window.localStorage.getItem("taskList");
-  taskList.innerHTML = savedTasks;
-  addDeleteEventListeners(); // Add delete event listeners to loaded tasks
-}
-loadTasks(); // Load tasks on page load
