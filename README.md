@@ -41,7 +41,7 @@ To start using the ToDoList, follow these steps:
 
 3. Alternatively, you can view a live demo of the [ToDoList](https://sh1v4nk.github.io/ToDoList/).
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - HTML
 - CSS
