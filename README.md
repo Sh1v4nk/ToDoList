@@ -37,6 +37,10 @@ To start using the ToDoList, follow these steps:
 ```bash
  git clone https://github.com/Sh1v4nk/ToDoList.git
 ```
+
+```
+cd ToDoList
+```
 2. Open the `index.html` file in your web browser.
 
 3. Alternatively, you can view a live demo of the [ToDoList](https://sh1v4nk.github.io/ToDoList/).
