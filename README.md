@@ -49,7 +49,7 @@ cd ToDoList
 
 - HTML
 - CSS
-- JavaScript
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## Screenshot
 
