@@ -1,6 +1,10 @@
+<div align="center">
+  
 # ToDoList
 
 Welcome to my Simple ToDoList application—a project born out of my journey to learn JavaScript!
+</div>
+
 
 ## Table of Contents
 
