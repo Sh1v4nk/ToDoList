@@ -3,6 +3,7 @@
 # ToDoList
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+![GitHub repo size](https://img.shields.io/github/repo-size/Sh1v4nk/ToDoList)
 
 Welcome to my Simple ToDoList application—a project born out of my journey to learn JavaScript!
 </div>
